@@ -1,0 +1,101 @@
+body{
+    background-color: $secondary-color;
+    font-family: inter,helvetica,sans-serif;
+}
+.container{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.layout{
+    margin: 4rem 0;
+    padding: 2rem;
+    position: relative;
+    &--checkout{
+        background-color: $white-color;
+        border-radius: $radius;
+        box-shadow: 0 5px 10px rgba(255,138,0,0.1);
+        display: grid;
+        grid-template-columns: 70% auto;
+        column-gap: 20px;
+        padding: 6rem 2rem;
+    }
+
+    &--summary{
+        border-left: 1px solid rgba(255,138,0,0.2);
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &--tabs{
+        position: absolute;
+        top: -110px;
+        left: calc(50% - 250px);
+        background-color: $secondary-color;
+        min-width: 500px;
+        border-radius: 50px;
+        padding: 2rem 2rem;
+        .tabs-wrapper{
+            display: flex;
+            align-items: center;
+            a{
+                display: flex;
+                align-items: center;
+                color: $primary-color;
+                margin-right: 20px;
+                text-decoration: none;
+                cursor: pointer;
+
+                .step{        
+                    background-color: $light-color;            
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;                   
+                    margin-right: 10px;
+                    color: $primary-color;
+                }
+
+                &.active{
+                    .step{
+                        background-color: $primary-color;            
+                        color: $white-color;
+                        box-shadow: 0 2px 4px rgba(255,138,0,0.3);
+                    }
+                }
+            }
+            
+        }
+    }
+
+
+}
+
+.page{
+
+    //Page delivery
+
+    &--delivery{
+
+        &-wrapper{
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20px;
+            width: 100%;
+        }
+    }
+
+    &--finish{
+        &-wrapper{
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
